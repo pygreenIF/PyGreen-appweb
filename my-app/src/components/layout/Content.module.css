@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 80%;
+}
+
+
+.container div {
+    border: 3px solid #51BA4F;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.container p {
+    font-family: 'Press Start 2P';
+    color: white;
+    transition: .5s;
+}
+
+.container div:hover {
+    background-color: #131516;
+}
+
+@media (max-width: 768px) {
+    .container p {
+        font-size: 12px;
+    }
+}

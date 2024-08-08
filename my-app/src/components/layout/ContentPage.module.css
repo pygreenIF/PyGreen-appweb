@@ -1,0 +1,52 @@
+.content_page {
+    width: 100%;
+    padding-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content_page .container_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #272B30;
+    border: 3px solid #51BA4F;
+    border-radius: 10px;
+    padding-block: 20px;
+    padding-inline: 30px;
+}
+
+.container_content h1 {
+    font-size: 24px;
+    color: #FFF;
+    font-family: 'Press Start 2P';
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.container_content h2 {
+    font-size: 20px;
+    color: #51BA4F;
+    font-family: 'Press Start 2P';
+}
+
+.container_content h2 span {
+    color: #FFF;
+}
+
+.container_content h3 {
+    font-size: 13px;
+    margin-top: -10px;
+    color: #51BA4F;
+    font-family: 'Press Start 2P';
+}
+
+.container_content p {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 18px;
+}

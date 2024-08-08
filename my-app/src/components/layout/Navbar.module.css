@@ -1,0 +1,67 @@
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1B1E21;
+    padding: 1em;
+    border-bottom: #51BA4F 1px solid;
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+}
+
+.navbar div h1 {
+    color: #FFF;
+    font-size: 20px;
+    font-family: "Press Start 2P" !important;
+}
+
+.navbar div a {
+    text-decoration: none;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.item {
+    margin-right: 1em;
+}
+
+.item a {
+    font-size: 15px;
+    color: #FFF;
+    text-decoration: none;
+    font-family: "Press Start 2P" !important;
+    transition: .2s;
+}
+
+.item a:hover {
+    color: #51BA4F;
+}
+
+.logoPygreen {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+@media (max-width: 1200px) {
+    .item a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .item a {
+        display: none;
+    }
+}

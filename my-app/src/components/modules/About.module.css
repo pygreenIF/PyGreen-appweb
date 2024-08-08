@@ -1,0 +1,133 @@
+.aboutUs {
+    background-color: #1b1e21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P';
+    color: #fff;
+    flex-direction: column;
+}
+
+.aboutUs h1 {
+    font-family: 'Press Start 2P';
+    font-size: 2.2rem;
+    margin-block: 50px;
+    margin-bottom: -25px;
+}
+
+.aboutUs h1 span {
+    color: #51BA4F;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutCard {
+    max-width: 400px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #fff;
+    margin-inline: 50px;
+    margin-block: 50px;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.aboutCard:hover {
+    border: 5px solid #51BA4F;
+    transform: scale(1.05);
+}
+
+.aboutCard:hover img {
+    filter: brightness(100%);
+}
+
+.aboutCard:hover .socialMedia {
+    opacity: 1;
+}
+
+.aboutCard img {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    margin-block-start: 15px;
+    filter: brightness(50%);
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.aboutCard h1 {
+    margin-top: 20px !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 0px !important;
+}
+
+.aboutCard p {
+    width: 80%;
+    font-size: 1rem;
+    text-align: center;
+    margin-block: 20px;
+}
+
+.aboutCard .socialMedia {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.aboutCard .socialMedia i {
+    color: #51BA4F;
+    font-size: 3.5rem;
+    transition: .5s;
+}
+
+.aboutProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    color: #fff;
+    flex-direction: column;
+}
+
+.aboutProject h1 {
+    font-family: 'Press Start 2P';
+    font-size: 2.2rem;
+    margin-block: 50px;
+}
+
+.aboutProject h1 span {
+    color: #51BA4F;
+}
+
+.aboutProject .textProject{
+    margin-bottom: 100px;
+}
+
+.aboutProject p {
+    font-size: 1.4rem !important;
+    margin-block: .5rem;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .aboutUs h1 {
+        font-size: 1.6rem;
+    }
+
+    .aboutCard h1 {
+        font-size: 0.6rem !important;
+    }
+
+    .aboutProject p {
+        font-size: 1.2rem !important;
+    }
+}

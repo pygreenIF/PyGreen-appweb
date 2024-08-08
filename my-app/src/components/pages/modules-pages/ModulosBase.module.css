@@ -1,0 +1,45 @@
+.title_module {
+    display: flex;
+    justify-content: flex-start;
+    margin-block: 20px;
+}
+
+.topic_title {
+    margin-top: 40px;
+}
+
+.topic {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.topic hr {
+    color: #fff;
+    margin-block: 20px;
+}
+
+.topic h2 {
+    margin-block: 30px;
+}
+
+.topic p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.topic p span {
+    color: #51BA4F;
+}
+
+.topic .codeblock {
+    width: 65vw;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+    font-family: monospace;
+    color: #f8f8f2;
+    margin-block: 25px;
+}

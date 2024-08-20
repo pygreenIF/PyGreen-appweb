@@ -92,6 +92,10 @@
 }
 
 @media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+    
     .container h1 {
         font-size: 12px;
     }

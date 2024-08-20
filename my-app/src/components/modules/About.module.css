@@ -96,6 +96,7 @@
     align-items: center;  
     color: #fff;
     flex-direction: column;
+    text-align: center;
 }
 
 .aboutProject h1 {
@@ -118,13 +119,35 @@
     text-align: justify;
 }
 
+.aboutProject .textProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    .aboutUs h1 {
+        font-size: 1.4rem;
+    }
+
+    .aboutProject .textProject {
+        width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
     .aboutUs h1 {
-        font-size: 1.6rem;
+        width: 90%;
+        font-size: 1rem;
     }
 
     .aboutCard h1 {
         font-size: 0.6rem !important;
+    }
+
+    .aboutProject h1 {
+        font-size: 1.3rem;
     }
 
     .aboutProject p {

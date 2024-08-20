@@ -113,3 +113,35 @@
 .buttonContainerRight a:hover {
     background-color: #2d662c;
 }
+
+.buttonContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .topic .codeblock {
+        width: 85vw;
+    }
+
+    .topic ul {
+        width: 85vw;
+    }
+
+    .title_module {
+        margin-top: -20px;
+    }
+
+    .topic h1 {
+        font-size: 18px !important;
+    }
+
+    .topic h2 {
+        font-size: 14px !important;
+    }
+
+    .topic h3 {
+        font-size: 12px !important;
+    }
+}

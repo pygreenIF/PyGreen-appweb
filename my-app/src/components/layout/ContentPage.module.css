@@ -50,3 +50,10 @@
     font-weight: 500;
     font-size: 18px;
 }
+
+@media (max-width: 768px) {
+    .content_page .container_content {
+        border: none;
+        background-color: #1B1E21;
+    }
+}

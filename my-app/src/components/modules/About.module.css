@@ -1,10 +1,10 @@
 .aboutUs {
-    background-color: #1b1e21;
+    background-color: var(--color-background);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Press Start 2P';
-    color: #fff;
+    color: var(--white-primary);
     flex-direction: column;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .aboutUs h1 span {
-    color: #51BA4F;
+    color: var(--green-primary);
 }
 
 .aboutContainer {
@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid #fff;
+    border: 5px solid var(--white-primary);
     margin-inline: 50px;
     margin-block: 50px;
     box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
@@ -40,7 +40,7 @@
 }
 
 .aboutCard:hover {
-    border: 5px solid #51BA4F;
+    border: 5px solid var(--green-primary);
     transform: scale(1.05);
 }
 
@@ -85,7 +85,7 @@
 }
 
 .aboutCard .socialMedia i {
-    color: #51BA4F;
+    color: var(--green-primary);
     font-size: 3.5rem;
     transition: .5s;
 }
@@ -94,7 +94,7 @@
     display: flex;
     justify-content: center;
     align-items: center;  
-    color: #fff;
+    color: var(--white-primary);
     flex-direction: column;
     text-align: center;
 }
@@ -106,7 +106,7 @@
 }
 
 .aboutProject h1 span {
-    color: #51BA4F;
+    color: var(--green-primary);
 }
 
 .aboutProject .textProject{

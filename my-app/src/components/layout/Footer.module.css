@@ -1,7 +1,7 @@
 .footer {
-    border-top: #51BA4F 2px solid;
-    background-color: #272B30;
-    color: #FFF;
+    border-top: var(--green-primary) 2px solid;
+    background-color: var(--color-footer);
+    color: var(--white-primary);
     padding: 4em;
     text-align: center;
 }
@@ -12,7 +12,7 @@
 
 .copy_right span {
     font-weight: bold;
-    color: #51BA4F;
+    color: var(--green-primary);
 }
 
 @media (max-width: 768px) { 

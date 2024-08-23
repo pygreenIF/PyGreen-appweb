@@ -5,15 +5,12 @@ import Modulo1 from './components/pages/modules-pages/Modulo1'
 import Modulo2 from './components/pages/modules-pages/Modulo2'
 import Modulo3 from './components/pages/modules-pages/Modulo3'
 import Modulo4 from './components/pages/modules-pages/Modulo4'
-// import Sobre from './components/pages/Sobre'
-// import Contato from './components/pages/Contato'
-// import NovoProjeto from './components/pages/NovoProjeto'
-// import Projetos from './components/pages/Projetos'
 
 import Container from './components/layout/Container'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import About from './components/modules/About'
+import Home from './components/modules/Home'
 
 
 function App() {
@@ -22,6 +19,7 @@ function App() {
       <Navbar />
       <Container customClass='min-height'>
         <Routes>
+            <Route exact path="/" element= {<Home />}/>
             <Route exact path="/modulos" element= {<Modules />}/>
             <Route exact path="/modulos/modulo-1" element= {<Modulo1 />}/>
             <Route exact path="/modulos/modulo-2" element= {<Modulo2 />}/>

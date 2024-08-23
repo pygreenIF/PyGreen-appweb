@@ -1,0 +1,80 @@
+.homepage {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.backgroundOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.homepage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.homepage .logo {
+    max-width: 50%;
+    height: auto;
+    z-index: 1;
+}
+
+.homepage .title {
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.homepage .title h1 {
+    font-size: 3rem;
+    font-family: 'Press Start 2P';
+}
+
+.text {
+    margin-top: 10px;
+    max-width: 80%;
+    z-index: 1;
+}
+
+.homepage p {
+    font-size: 1rem;
+    font-family: 'Press Start 2P';
+}
+
+.homepage a {
+    margin-top: 30px;
+    padding: 20px 20px;
+    background-color: var(--white-primary);
+    color: var(--black-primary);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    z-index: 1;
+    font-family: 'Press Start 2P';
+    transition: .3s;
+}
+
+.homepage a:hover {
+    background-color: var(--green-primary);
+    color: var(--white-primary);
+}

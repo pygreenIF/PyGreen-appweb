@@ -8,7 +8,7 @@
 
 
 .container div {
-    border: 3px solid #51BA4F;
+    border: 3px solid var(--green-primary);
     margin-top: 10px;
     padding: 15px;
     border-radius: 10px;
@@ -17,13 +17,14 @@
 
 .container p {
     font-family: 'Press Start 2P';
-    color: white;
+    color: var(--white-primary);
     transition: .5s;
 }
 
 .container div:hover {
-    background-color: #131516;
+    background-color: var(--color-background);
 }
+
 
 @media (max-width: 768px) {
     .container p {

@@ -1,3 +1,26 @@
+.contents {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.content_aside_nav {
+    width: 15%;
+    height: 100vh;
+    display: flex;
+    position: sticky;
+    left: 0;
+    top: 20px;
+    border-right: 1px solid var(--green-primary);
+}
+
+.content_aside_nav .navigation {  
+    min-height: 0%;
+    max-height: 50%;
+    display: flex;
+    padding: 1.5em;
+    flex-wrap: wrap;
+}
+
 .content_page {
     width: 100%;
     padding-block: 50px;
@@ -8,7 +31,7 @@
 }
 
 .content_page .container_content {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,14 +47,16 @@
     font-size: 24px;
     color: var(--white-primary);
     font-family: 'Press Start 2P';
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .container_content h2 {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--green-primary);
     font-family: 'Press Start 2P';
+    font-weight: bold;
 }
 
 .container_content h2 span {
@@ -43,6 +68,7 @@
     margin-top: -10px;
     color: var(--green-primary);
     font-family: 'Press Start 2P';
+    font-weight: bold;
 }
 
 .container_content p {

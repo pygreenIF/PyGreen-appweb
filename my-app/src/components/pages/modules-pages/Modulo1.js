@@ -158,7 +158,19 @@ print("O poder total do feitiço é:", poder_total)`,
 ];
 
     return (
-        <ContentPage>
+        <ContentPage 
+        titles ={['lista', 'dicionario', 'funcao']} 
+        subtitles={['Criando Listas', 
+            'Acessando Elementos com Índices', 
+            'Modificando Itens em uma Lista', 
+            'Adicionando e Removendo Itens', 
+            'Iterando Sobre uma Lista', 
+            'Criando Dicionários', 
+            'Acessando Valores em um Dicionário', 
+            'Função para saudação', 
+            'Função para calcular a área de um quadrado']}
+        num_subtitles = {[5, 2, 2]} 
+        customClass="your-custom-class">
             <div className={styles.title_module}><h2>Módulo 1</h2></div>
                 <div className={styles.topic}>
                     <p>Olá, eu sou o narrador dessa linda história que construiremos juntos, que o(a) tornará um ou uma grande expert do mundo da programação, você está preparado(a)?</p>

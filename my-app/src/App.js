@@ -17,14 +17,16 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Routes>
+        <Route exact path="/" element= {<Home />}/>
+        <Route exact path="/modulos/modulo-1" element= {<Modulo1 />}/>
+        <Route exact path="/modulos/modulo-2" element= {<Modulo2 />}/>
+        <Route exact path="/modulos/modulo-3" element= {<Modulo3 />}/>
+        <Route exact path="/modulos/modulo-4" element= {<Modulo4 />}/>
+      </Routes>
       <Container customClass='min-height'>
         <Routes>
-            <Route exact path="/" element= {<Home />}/>
             <Route exact path="/modulos" element= {<Modules />}/>
-            <Route exact path="/modulos/modulo-1" element= {<Modulo1 />}/>
-            <Route exact path="/modulos/modulo-2" element= {<Modulo2 />}/>
-            <Route exact path="/modulos/modulo-3" element= {<Modulo3 />}/>
-            <Route exact path="/modulos/modulo-4" element= {<Modulo4 />}/>
             <Route exact path="/sobre" element= {<About />}/>
         </Routes>
       </Container>

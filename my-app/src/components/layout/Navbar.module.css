@@ -4,6 +4,9 @@
     background-color: var(--color-background);
     padding: 1em;
     border-bottom: var(--green-primary) 1px solid;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
 }
 
 .navbar div {

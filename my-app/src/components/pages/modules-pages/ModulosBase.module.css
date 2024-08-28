@@ -24,7 +24,7 @@
 }
 
 .topic h3 {
-    margin-block: 10px !important;
+    margin-block: 20px !important;
 }
 
 .topic p {
@@ -94,13 +94,25 @@
     margin-block: 25px;
 }
 
-.buttonContainerRight {
+.buttonContainerRight, .buttonContainer, .buttonContainerLeft {
     margin-top: 10px;
     display: flex;
+    width: 100%;
+}
+
+.buttonContainerRight {
     justify-content: flex-end;
 }
 
-.buttonContainerRight a {
+.buttonContainer {
+    justify-content: space-between;
+}
+
+.buttonContainerLeft {
+    justify-content: flex-start;
+}
+
+.buttonContainerRight a, .buttonContainer a, .buttonContainerLeft a{
     background-color: #51BA4F;
     color: #fff;
     text-decoration: none;
@@ -110,15 +122,11 @@
     transition: .5s;
 }
 
-.buttonContainerRight a:hover {
+.buttonContainerRight a:hover, .buttonContainer a:hover, .buttonContainerLeft a:hover {
     background-color: #2d662c;
 }
 
-.buttonContainer {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
+
 
 @media (max-width: 768px) {
     .topic .codeblock {

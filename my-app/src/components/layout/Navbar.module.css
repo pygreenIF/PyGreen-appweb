@@ -4,8 +4,10 @@
     background-color: var(--color-background);
     padding: 1em;
     border-bottom: var(--green-primary) 1px solid;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 }
 

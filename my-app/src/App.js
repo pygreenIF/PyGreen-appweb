@@ -13,23 +13,40 @@ import About from './components/modules/About'
 import Home from './components/modules/Home'
 
 
+function ContainerLayout({children}) {
+  return <Container customClass='min-height'>{children}</Container>;
+}
+
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path="/" element= {<Home />}/>
-        <Route exact path="/modulos/modulo-1" element= {<Modulo1 />}/>
-        <Route exact path="/modulos/modulo-2" element= {<Modulo2 />}/>
-        <Route exact path="/modulos/modulo-3" element= {<Modulo3 />}/>
-        <Route exact path="/modulos/modulo-4" element= {<Modulo4 />}/>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/modulos/modulo-1" element={<Modulo1 />} />
+        <Route exact path="/modulos/modulo-2" element={<Modulo2 />} />
+        <Route exact path="/modulos/modulo-3" element={<Modulo3 />} />
+        <Route exact path="/modulos/modulo-4" element={<Modulo4 />} />
+
+        <Route 
+          exact 
+          path="/modulos" 
+          element={
+            <ContainerLayout>
+              <Modules />
+            </ContainerLayout>
+          } 
+        />
+        <Route 
+          exact 
+          path="/sobre" 
+          element={
+            <ContainerLayout>
+              <About />
+            </ContainerLayout>
+          } 
+        />
       </Routes>
-      <Container customClass='min-height'>
-        <Routes>
-            <Route exact path="/modulos" element= {<Modules />}/>
-            <Route exact path="/sobre" element= {<About />}/>
-        </Routes>
-      </Container>
       <Footer />
     </Router>
   );

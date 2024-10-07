@@ -159,17 +159,22 @@ print("O poder total do feitiço é:", poder_total)`,
 
     return (
         <ContentPage 
-        titles ={['lista', 'dicionario', 'funcao']} 
-        subtitles={['Criando Listas', 
-            'Acessando Elementos com Índices', 
-            'Modificando Itens em uma Lista', 
-            'Adicionando e Removendo Itens', 
-            'Iterando Sobre uma Lista', 
-            'Criando Dicionários', 
-            'Acessando Valores em um Dicionário', 
-            'Função para saudação', 
-            'Função para calcular a área de um quadrado']}
-        num_subtitles = {[5, 2, 2]} 
+        titles ={['Métodos de entrada', 'Métodos de saída', 'Operadores de atribuição', 'Variáveis', 'Constantes', 'Tipos de dados', 'Operadores aritméticos']} 
+        subtitles={['Combinando entrada e saída',
+            'Inteiros',
+            'Flutuantes',
+            'Strings',
+            'Manipulando strings',
+            'Booleanos',
+            'Adição',
+            'Subtração',
+            'Multiplicação',
+            'Divisão',
+            'Divisão inteira',
+            'Módulo',
+            'Exponenciação'
+        ]}
+        num_subtitles = {[0, 1, 0, 0, 0, 5, 7]} 
         customClass="your-custom-class">
             <div className={styles.title_module}><h2>Módulo 1</h2></div>
                 <div className={styles.topic}>
@@ -200,7 +205,7 @@ print("O poder total do feitiço é:", poder_total)`,
                 <div className={styles.topic}>
                     <p>Olá, seja muito bem-vindo(a) ao mundo mágico da programação, prepare-se para descobrir os segredos dos métodos de entrada e saída usando Python, ferramentas essenciais para qualquer herói digital em sua jornada épica!</p>
                     <p>Imagine que você é um mago poderoso em uma terra repleta de enigmas e desafios. Para interagir com o mundo ao seu redor, você precisa comunicar-se tanto com os sábios que lhe dão informações quanto com os livros antigos onde registra suas descobertas. Em Python, os métodos de entrada e saída são os feitiços que permitem essa comunicação.</p>
-                    <h1 id='MetodosDeEntrada'>Métodos de Entrada</h1>
+                    <h1 id='Métodos de entrada'>Métodos de Entrada</h1>
                     <p>Os métodos de entrada são como os sábios que respondem às suas perguntas. Quando você deseja obter informações do usuário ou de outra fonte, você usa um feitiço de entrada. O mais comum desses feitiços é <span>input()</span>. Com ele, você pode perguntar ao usuário por um valor ou uma instrução.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -210,7 +215,7 @@ print("O poder total do feitiço é:", poder_total)`,
                     </pre>
                 </div>
                 <div className={styles.topic}>
-                    <h1 id='MetodosDeSaida'>Métodos de Saída</h1>
+                    <h1 id='Métodos de saída'>Métodos de Saída</h1>
                     <p>Os métodos de saída são como os livros antigos nos quais você registra suas descobertas para futuras gerações de heróis. O feitiço de saída mais utilizado é <span>print()</span>, que permite exibir informações na tela, compartilhando seus achados com o mundo.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -218,7 +223,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[4]}
                         </code>
                     </pre>
-                    <h2>Combinando Entrada e Saída</h2>
+                    <h2 id='Combinando entrada e saída'>Combinando Entrada e Saída</h2>
                     <p>Em suas aventuras, você frequentemente precisa combinar esses feitiços para criar interações poderosas, como quando um mago consulta um sábio e depois anota suas novas descobertas.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -229,7 +234,7 @@ print("O poder total do feitiço é:", poder_total)`,
                     <p>Com os métodos de entrada e saída, você pode criar diálogos ricos e registrar os feitos de sua jornada. Use esses feitiços com sabedoria, aventureiro, e você estará preparado para enfrentar qualquer desafio que o mundo da programação lhe apresentar!</p>
                 </div>
                 <div className={styles.topic}>
-                    <h1 className={styles.topic_title} id='OperadoresDeAtribuicao'>Operadores de atribuição</h1>
+                    <h1 className={styles.topic_title} id='Operadores de atribuição'>Operadores de atribuição</h1>
                     <p>Agora, prepare-se para descobrir outro segredo vital: os operadores de atribuição! Eles são como os encantamentos que permitem armazenar informações mágicas em talismãs conhecidos como variáveis.</p>
                     <p>Um operador de atribuição é o símbolo <span>=</span>, que você usa para colocar um valor dentro de uma variável. É como dizer ao seu talismã: "Guarde este poder para mim!"</p>
                     <p>Exemplo:</p>
@@ -240,7 +245,7 @@ print("O poder total do feitiço é:", poder_total)`,
                     </pre>
                 </div>
                 <div className={styles.topic}>
-                    <h1 className={styles.topic_title} id='Variaveis'>Variáveis</h1>
+                    <h1 className={styles.topic_title} id='Variáveis'>Variáveis</h1>
                     <p>As variáveis são como os talismãs em sua jornada, onde você pode guardar números, textos ou outras informações que encontrar pelo caminho. Cada talismã tem um nome único, para que você possa chamá-lo quando precisar.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -268,9 +273,9 @@ print("O poder total do feitiço é:", poder_total)`,
                     <p>Com esses conhecimentos em mãos, você está mais preparado do que nunca para enfrentar os desafios que a programação tem a oferecer. Que sua jornada seja repleta de descobertas e conquistas épicas, bravo aventureiro!</p>
                 </div>
                 <div className={styles.topic}>
-                    <h1 className={styles.topic_title} id='TposDeDados'>Tipos de Dados</h1>
+                    <h1 className={styles.topic_title} id='Tipos de dados'>Tipos de Dados</h1>
                     <p>Agora, aventureiro(a), vamos explorar os diferentes tipos de dados que você encontrará em Python. Cada tipo de dado é uma ferramenta mágica com características próprias, essencial para armazenar e manipular as informações em sua jornada.</p>
-                    <h2>Inteiros (int)</h2>
+                    <h2 id='Inteiros'>Inteiros (int)</h2>
                     <p>Os inteiros são como os robustos guerreiros do reino, capazes de lidar com números sem frações. Eles são usados para representar contagens, idades, pontos de vida e qualquer valor que não necessite de um ponto decimal.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -278,7 +283,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[10]}
                         </code>
                     </pre>
-                    <h2>Flutuantes (float)</h2>
+                    <h2 id='Flutuantes'>Flutuantes (float)</h2>
                     <p>Os flutuantes são os sábios alquimistas que lidam com números fracionários e decimais. Eles são ideais para representar medições precisas, como distâncias, pesos e probabilidades.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -286,7 +291,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[11]}
                         </code>
                     </pre>
-                    <h2>Strings (str)</h2>
+                    <h2 id='Strings'>Strings (str)</h2>
                     <p>As strings são os bardos e contadores de histórias do reino, responsáveis por armazenar textos e caracteres. Elas são usadas para nomes, descrições e qualquer sequência de caracteres.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -294,7 +299,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[12]}
                         </code>
                     </pre>
-                    <h2>Manipulando Strings</h2>
+                    <h2 id='Manipulando strings'>Manipulando Strings</h2>
                     <h3>Fatiamento (Slicing)</h3>
                     <p>Você pode obter sub-sequências de uma string ou lista usando fatiamento. A sintaxe para fatiamento é <span>sequência[inicio:fim]</span>, onde <span>inicio</span> é o índice inicial (inclusivo) e <span>fim</span> é o índice final (exclusivo).</p>
                     <p>Exemplo com Strings:</p>
@@ -314,7 +319,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[14]}
                         </code>
                     </pre>
-                    <h2>Booleanos (bool)</h2>
+                    <h2 id='Booleanos'>Booleanos (bool)</h2>
                     <p>Os booleanos são os guardiões do verdadeiro e do falso, representando apenas dois estados: verdadeiro (<span>True</span>) e falso (<span>False</span>). Eles são usados para decisões lógicas, como verificar condições e controlar o fluxo da sua história.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -331,9 +336,9 @@ print("O poder total do feitiço é:", poder_total)`,
                     </pre>
                     <p>Com esses tipos de dados à sua disposição, você está ainda mais preparado para manipular as informações e enfrentar os desafios que surgirem em sua jornada. Boa sorte, herói, e que sua aventura seja repleta de descobertas e vitórias!</p>
                 <div className={styles.topic}>
-                    <h1 className={styles.topic_title} id='OperadoresAritmeticos'>Operadores aritméticos</h1>
+                    <h1 className={styles.topic_title} id='Operadores aritméticos'>Operadores aritméticos</h1>
                     <p>Bravo(a) aventureiro(a), agora que você conhece os tipos de dados fundamentais, é hora de descobrir os operadores aritméticos em Python, as ferramentas mágicas que permitem realizar cálculos e manipular números. Esses operadores são essenciais para qualquer mago da programação, pois com eles, você poderá somar, subtrair, multiplicar e muito mais.</p>
-                    <h2>Adição (<span>+</span>)</h2>
+                    <h2 id='Adição'>Adição (<span>+</span>)</h2>
                     <p>A adição é o encantamento que permite somar dois valores. Use-o para acumular tesouros ou calcular a soma de forças.</p>
                     <p>Exemplo: </p>
                     <pre className={styles.codeblock}>
@@ -341,7 +346,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[17]}
                         </code>
                     </pre>
-                    <h2>Subtração (<span>-</span>)</h2>
+                    <h2 id='Subtração'>Subtração (<span>-</span>)</h2>
                     <p>A subtração é o feitiço para subtrair um valor de outro. Perfeito para calcular perdas ou diminuir pontos de vida após uma batalha.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -349,7 +354,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[18]}
                         </code>
                     </pre>
-                    <h2>Multiplicação (<span>*</span>)</h2>
+                    <h2 id='Multiplicação'>Multiplicação (<span>*</span>)</h2>
                     <p>A multiplicação multiplica dois valores. Ideal para aumentar sua força com poções mágicas ou calcular áreas de territórios conquistados.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -357,7 +362,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[19]}
                         </code>
                     </pre>
-                    <h2>Divisão (<span>/</span>)</h2>
+                    <h2 id='Divisão'>Divisão (<span>/</span>)</h2>
                     <p>A divisão divide um valor por outro. Útil para dividir tesouros entre companheiros ou calcular a quantidade de poções usadas.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -365,7 +370,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[20]}
                         </code>
                     </pre>
-                    <h2>Divisão Inteira (<span>//</span>)</h2>
+                    <h2 id='Divisão inteira'>Divisão Inteira (<span>//</span>)</h2>
                     <p>A divisão inteira é como a divisão, mas retorna apenas a parte inteira do resultado, descartando qualquer fração. Ideal para calcular quantas vezes um recurso pode ser usado completamente.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -373,7 +378,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[21]}
                         </code>
                     </pre>
-                    <h2>Módulo (<span>%</span>)</h2>
+                    <h2 id='Módulo'>Módulo (<span>%</span>)</h2>
                     <p>O módulo retorna o resto de uma divisão. É como descobrir quantas moedas sobraram após comprar espadas.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>
@@ -381,7 +386,7 @@ print("O poder total do feitiço é:", poder_total)`,
                             {codeExample[22]}
                         </code>
                     </pre>
-                    <h2>Exponenciação (<span>**</span>)</h2>
+                    <h2 id='Exponenciação'>Exponenciação (<span>**</span>)</h2>
                     <p>A exponenciação eleva um número a uma potência. Use-o para calcular o poder aumentado de um feitiço ou a área de um quadrado mágico.</p>
                     <p>Exemplo:</p>
                     <pre className={styles.codeblock}>

@@ -150,13 +150,27 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
       
 
     return (
-        <ContentPage>
+        <ContentPage
+        titles={['Condições if, elif e else', 'Operadores de Comparação', 'Operadores Lógicos', 'Laços de Repetição']}
+        subtitles={['Condição IF',
+            'Condição ELIF',
+            'Condição ELSE',
+            'Tabela verdade',
+            'Laço FOR',
+            'Laço WHILE',
+            'Contadores',
+            'Acumuladores',
+            'Early Exit com BREAK',
+            'Early Exit com CONTINUE'
+        ]}
+        num_subtitles = {[3, 0, 1, 6]} 
+        customClass="your-custom-class">
             <div className={styles.title_module}><h2>Módulo 2</h2></div>
             <div className={styles.topic}>
                 <p>Aventureiro(a), chegou o momento de desvendar outro artefato poderoso no mundo da programação: as condições e os operadores de comparação. Em Python, essas ferramentas permitem que você tome decisões com base em diferentes situações, como se tivesse um mapa mágico que lhe indica o caminho certo a seguir em cada encruzilhada.</p>
-                <h1>Condições if, elif e else</h1>
+                <h1 id='Condições if, elif e else'>Condições if, elif e else</h1>
                 <p>No Python, as condições são usadas para executar blocos de códigos diferentes com base em certas condições, semelhantes a escolher uma rota diferente dependendo do que você encontra em sua jornada.</p>
-                <h2>A Condição if</h2>
+                <h2 id='Condição IF'>A Condição if</h2>
                 <p>A condição if é como um guardião no início de um caminho. Se a condição for verdadeira, você pode seguir por aquele caminho:</p>
                 <p>Exemplo:</p>
                 <pre className={styles.codeblock}>
@@ -165,7 +179,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                     </code>
                 </pre>
 
-                <h2>A condição elif</h2>
+                <h2 id='Condição ELIF'>A condição elif</h2>
                 <p>O elif (abreviação de "else if") é usado quando você tem várias condições para verificar. Pense nele como outros guardiões ao longo do caminho, cada um verificando uma condição diferente:</p>
                 <p>Exemplo:</p>
                 <pre className={styles.codeblock}>
@@ -174,7 +188,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                     </code>
                 </pre>
 
-                <h2>A condição else</h2>
+                <h2 id='Condição ELSE'>A condição else</h2>
                 <p>O else é como um guardião final que direciona você se nenhuma das condições anteriores for atendida:</p>
                 <p>Exemplo:</p>
                 <pre className={styles.codeblock}>
@@ -184,7 +198,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                 </pre>
             </div>
             <div className={styles.topic}>
-                <h1 id='OperadoresDeComparacao'>Operadores de Comparação</h1>
+                <h1 id='Operadores de Comparação'>Operadores de Comparação</h1>
                 <p>Para tomar decisões, você precisa comparar valores. Aqui estão alguns operadores de comparação, que são como bússolas mágicas, ajudando a determinar a direção certa:</p>
                 <ul>
                     <li>Igual a (<span>==</span>): Verifica se dois valores são iguais.</li>
@@ -209,14 +223,14 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                 <p>Com o conhecimento sobre condições <span>if</span>, <span>elif</span> e <span>else</span>, e os operadores de comparação, você agora tem a capacidade de tomar decisões inteligentes em suas aventuras de programação. </p>
             </div>
             <div className={styles.topic}>
-                <h1 id='OperadoresLogicos'>Operadores Lógicos</h1>
+                <h1 id='Operadores Lógicos'>Operadores Lógicos</h1>
                 <p>Os operadores lógicos são como as ferramentas que usamos para fazer perguntas e tomar decisões quando estamos programando. Existem três principais: "<span>and</span>", "<span>or</span>" e "<span>not</span>".</p>
                 <ul>
                     <li>"<span>and</span>" é usado quando queremos que duas condições sejam verdadeiras para algo acontecer. Por exemplo, você só pode abrir o portão mágico se tiver a chave <span>e</span> souber a senha secreta.</li>
                     <li>"<span>or</span>" é usado quando apenas uma das condições precisa ser verdadeira para algo acontecer. Por exemplo, você pode escolher entre enfrentar o dragão <span>ou</span> atravessar o rio encantado para chegar ao castelo.</li>
                     <li>"<span>not</span>" é usado para inverter o valor de uma condição. Se queremos verificar se algo não é verdadeiro, usamos "not". Por exemplo, se um guardião disser que você não pode passar, você pode usar a magia "<span>not</span>" para convencê-lo do contrário.</li>
                 </ul>
-                <h2>Tabela Verdade</h2>
+                <h2 id='Tabela verdade'>Tabela Verdade</h2>
                 <p>A tabela verdade é como um mapa mágico que mostra todas as combinações possíveis de decisões que você pode tomar e os resultados delas. Por exemplo, se usarmos "and" para combinar duas ações, podemos criar uma tabela para ver o que acontece:</p>
                 <div className={styles.tableContainer}>
                     <table className={styles.tableBordered}>
@@ -257,10 +271,10 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                 <p>Assim como você usa seu conhecimento para tomar as melhores decisões durante sua jornada, na programação, usamos a tabela verdade para entender como os operadores lógicos funcionam em diferentes situações.</p>
             </div>
             <div className={styles.topic}>
-                <h1 id='LacoDeRepeticao'>Laços de Repetição</h1>
+                <h1 id='Laços de Repetição'>Laços de Repetição</h1>
                 <p>Um laço de repetição é como uma missão que você faz várias vezes. Imagine que você é um herói em uma jornada e precisa coletar 10 poções mágicas que estão espalhadas pelo reino. Em vez de coletar uma poção e voltar para casa cada vez, você decide usar um laço de repetição para pegar todas de uma só vez. O laço continua até que todas as poções sejam coletadas.</p>
 
-                <h2>Laço de repetição for</h2>
+                <h2 id='Laço FOR'>Laço de repetição for</h2>
                 <p>Vamos dizer que você tem uma lista de lugares onde estão escondidas as poções: floresta, caverna, montanha, rio, etc. Você usa um laço 'for' para visitar cada um desses lugares e coletar as poções.</p>
                 <p>Aqui está como seria o código em Python:</p>
                 <pre className={styles.codeblock}>
@@ -284,7 +298,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                 </ul>
                 <p>Cada vez que o laço 'for' executa a ação de visitar um lugar e coletar uma poção, isso é uma iteração.</p>
 
-                <h2>Laço de repetição while</h2>
+                <h2 id='Laço WHILE'>Laço de repetição while</h2>
                 <p>Imagine que você é um herói que precisa treinar para se tornar mais forte. Você decide fazer flexões até ficar exausto. Você continuará fazendo flexões enquanto ainda tiver energia.</p>
                 <p>Em programação, o laço while funciona da mesma forma: ele continua repetindo um bloco de código enquanto uma condição for verdadeira.</p>
                 <p>Exemplo:</p>
@@ -300,7 +314,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                     <li>A cada iteração, o herói faz uma flexão, queima energia, e o programa imprime a energia restante.</li>
                     <li>Quando a energia chega a 0, o laço para e o herói está exausto.</li>
                 </ul>
-                <h3>Contadores</h3>
+                <h3 id='Contadores'>Contadores</h3>
                 <p>Um contador é como um diário que registra quantas flexões você fez. Ele aumenta de valor cada vez que você faz uma flexão.</p>
                 <p>Exemplo com Contador:</p>
                 <pre className={styles.codeblock}>
@@ -314,7 +328,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                     <li>A cada iteração, o contador “<span>flexoes</span>” aumenta em 1.</li>
                     <li>Quando o herói está exausto, o programa imprime o total de flexões feitas.</li>
                 </ul>
-                <h3>Acumuladores</h3>
+                <h3 id='Acumuladores'>Acumuladores</h3>
                 <p>Um acumulador é como uma sacola em que você guarda moedas que encontra durante uma jornada. Cada vez que você encontra uma moeda, você a coloca na sacola.</p>
                 <p>Exemplo com Acumulador:</p>
                 <pre className={styles.codeblock}>
@@ -336,7 +350,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                 </ul>
             </div>
             <div className={styles.topic}>
-                <h1>Early Exit com break</h1>
+                <h2 id='Early Exit com BREAK'>Early Exit com break</h2>
                 <p>Imagine que você é um herói explorando um calabouço em busca de um tesouro. O calabouço tem várias salas, e você precisa procurar o tesouro em cada sala. No entanto, assim que você encontra o tesouro, não precisa continuar explorando o restante das salas. Você pode sair do calabouço imediatamente. O comando <span>break</span> em programação é como essa decisão de sair do calabouço assim que o tesouro é encontrado.</p>
                 <p>Vamos ver um exemplo para compreender melhor:</p>
                 <pre className={styles.codeblock}>
@@ -350,7 +364,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                     <li>O laço “<span>for</span>” percorre cada sala.</li>
                     <li>Se encontrar a “<span>sala_com_tesouro</span>”, imprime uma mensagem e usa <span>break</span> para sair do laço, parando a exploração.</li>
                 </ul>
-                <h1>Early Exit com continue</h1>
+                <h2 id='Early Exit com CONTINUE'>Early Exit com continue</h2>
                 <p>Agora, imagine que você está em uma missão para coletar ervas mágicas em uma floresta, mas algumas áreas da floresta são perigosas e você deve evitá-las. Se você chegar a uma área perigosa, deve pular essa área e continuar a busca nas outras áreas seguras. O comando continue em programação permite que você pule o restante da iteração atual e passe para a próxima.</p>
                 <p>Vamos ver um exemplo:</p>
                 <pre className={styles.codeblock}>

@@ -6,10 +6,10 @@ function Modules() {
     return(
         <section className={styles.home_container}>
             <div className={styles.title_modules}>
-                <h1>Módulos</h1>
+                <h1>Módulos <span>.</span></h1>
             </div>
             <Module 
-            contents={['Métodos de saída e entrada', 'Operadores de atribuição, variáveis e constantes', 'Tipos de dados (Int, bool, float, str)', 'Operadores aritméticos']} 
+            contents={['Métodos de entrada e saída', 'Operadores de atribuição, variáveis e constantes', 'Tipos de dados (Int, bool, float, str)', 'Operadores aritméticos']} 
             num_module='1' 
             link='modulo-1'/>
             
@@ -24,7 +24,7 @@ function Modules() {
             link='modulo-3'/>
 
             <Module 
-            contents={['Criar arquivos', 'Deletar arquivos', 'Editar arquivos', 'Ler arquivos']} 
+            contents={['Criar arquivos','Ler arquivos', 'Editar arquivos', 'Deletar arquivos']} 
             num_module='4' 
             link='modulo-4'/>
         </section>

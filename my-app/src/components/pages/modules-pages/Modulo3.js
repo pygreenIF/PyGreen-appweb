@@ -167,12 +167,29 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
 ];      
 
     return(
-        <ContentPage>
+        <ContentPage
+        titles={['Listas', 'Dicionários', 'Funções']}
+        subtitles={['Criando listas',
+            'Acessando índices',
+            'Modificando itens',
+            'Adicionando e removendo itens',
+            'Iterando uma lista',
+            'Criando dicionários',
+            'Acessando valores',
+            'Modificando valores',
+            'Adicionando e removendo',
+            'Iterando um dicionário',
+            'Exemplo completo',
+            'Exemplos'
+        ]}
+        num_subtitles = {[5, 6, 1]} 
+        customClass="your-custom-class">
+        
         <div className={styles.title_module}><h2>Módulo 3</h2></div>
         <div className={styles.topic}>
             <h1 id='Listas'>Listas como iterável</h1>
             <p>Aventureiro(a), agora que você dominou os fundamentos mais básicos, é hora de descobrir um artefato poderoso no mundo da programação: as listas. Em Python, listas são estruturas que permitem armazenar múltiplos valores em uma única variável, como se você tivesse uma mochila mágica onde pode guardar diversos itens.</p>
-            <h2>Criando Listas</h2>
+            <h2 id='Criando listas'>Criando Listas</h2>
             <p>Para criar uma lista, você utiliza colchetes <span>[ ]</span> e separa os itens com vírgulas. As listas podem conter qualquer tipo de dado: inteiros, strings, flutuantes, booleanos, ou até outras listas.</p>
             <p><b>Exemplo:</b></p>
             <pre className={styles.codeblock}>
@@ -180,7 +197,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[0]}
                 </code>
             </pre>
-            <h2>Acessando Elementos com Índices</h2>
+            <h2 id='Acessando índices'>Acessando Elementos com Índices</h2>
             <p>Cada elemento em uma lista pode ser acessado usando seu índice. O índice é um número inteiro que começa em 0 para o primeiro elemento, 1 para o segundo, e assim por diante.</p>
             <p><b>Exemplo:</b></p>
             <pre className={styles.codeblock}>
@@ -194,7 +211,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[2]}
                 </code>
             </pre>
-            <h2>Modificando Itens em uma Lista</h2>
+            <h2 id='Modificando itens'>Modificando Itens em uma Lista</h2>
             <p>Você pode modificar os itens de uma lista atribuindo novos valores aos índices específicos.</p>
             <p><b>Exemplo:</b></p>
             <pre className={styles.codeblock}>
@@ -202,7 +219,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[3]}
                 </code>
             </pre>
-            <h2>Adicionando e Removendo Itens</h2>
+            <h2 id='Adicionando e removendo itens'>Adicionando e Removendo Itens</h2>
             <p>Python oferece métodos para adicionar e remover itens de uma lista, tornando-a uma estrutura dinâmica e flexível.</p>
             <h3>Adicionando Itens</h3>
             <pre className={styles.codeblock}>
@@ -216,7 +233,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[5]}
                 </code>
             </pre>
-            <h2>Iterando Sobre uma Lista</h2>
+            <h2 id='Iterando uma lista'>Iterando Sobre uma Lista</h2>
             <p>Você pode usar um laço <span>for</span> para iterar sobre os itens de uma lista e realizar operações com cada um deles.</p>
             <p><b>Exemplo:</b></p>
             <pre className={styles.codeblock}>
@@ -226,9 +243,9 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
             </pre>
         </div>
         <div className={styles.topic}>
-            <h1 id='Dicionarios'>Dicionários</h1>
+            <h1 id='Dicionários'>Dicionários</h1>
             <p>Prepare-se para conhecer outro artefato poderoso no mundo da programação: os dicionários. Em Python, dicionários são estruturas de dados que permitem armazenar pares de chave-valor, como se você tivesse um grimório mágico onde cada feitiço é descrito com seu nome (chave) e seus detalhes (valor).</p>
-            <h2>Criando Dicionários</h2>
+            <h2 id='Criando dicionários'>Criando Dicionários</h2>
             <p>Para criar um dicionário, você utiliza chaves <span>{ }</span> e define pares de chave-valor separados por dois pontos :. As chaves são únicas e podem ser de qualquer tipo imutável, como strings, números ou tuplas, enquanto os valores podem ser de qualquer tipo.</p>
             <p><b>Exemplo:</b></p>
             <pre className={styles.codeblock}>
@@ -236,7 +253,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[7]}
                 </code>
             </pre>
-            <h2>Acessando Valores em um Dicionário</h2>
+            <h2 id='Acessando valores'>Acessando Valores em um Dicionário</h2>
             <p>Para acessar um valor em um dicionário, você usa a chave correspondente entre colchetes <span>[ ]</span>.</p>
             <p><b>Exemplo:</b></p>
             <pre className={styles.codeblock}>
@@ -244,7 +261,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[8]}
                 </code>
             </pre>
-            <h2>Modificando Valores em um Dicionário</h2>
+            <h2 id='Modificando valores'>Modificando Valores em um Dicionário</h2>
             <p>Você pode modificar os valores de um dicionário atribuindo novos valores às chaves existentes.</p>
             <p><b>Exemplo:</b></p>
             <pre className={styles.codeblock}>
@@ -252,7 +269,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[9]}
                 </code>
             </pre>
-            <h2>Adicionando e Removendo Itens</h2>
+            <h2 id='Adicionando e removendo'>Adicionando e Removendo Itens</h2>
             <p>Python permite adicionar novos pares de chave-valor e remover pares existentes de um dicionário.</p>
             <h3>Adicionando Itens</h3>
             <pre className={styles.codeblock}>
@@ -266,7 +283,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[11]}
                 </code>
             </pre>
-            <h2>Iterando Sobre um Dicionário</h2>
+            <h2 id='Iterando um dicionário'>Iterando Sobre um Dicionário</h2>
             <p>Você pode usar um laço for para iterar sobre as chaves, valores ou pares de chave-valor em um dicionário.</p>
             <p><b>Exemplo:</b></p>
             <pre className={styles.codeblock}>
@@ -274,7 +291,7 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[12]}
                 </code>
             </pre>
-            <h2>Exemplo Completo</h2>
+            <h2 id='Exemplo completo'>Exemplo Completo</h2>
             <p>Vamos criar um exemplo onde o herói usa um dicionário para gerenciar seu inventário e status:</p>
             <pre className={styles.codeblock}>
                 <code className="language-python">
@@ -283,12 +300,12 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
             </pre>
         </div>
         <div className={styles.topic}>
-            <h1 id='Funcoes'>Funções</h1>
+            <h1 id='Funções'>Funções</h1>
             <p>Ah, explorador destemido, deixe-me contar sobre as mágicas e poderosas funções em Python, verdadeiros feitiços que podem simplificar sua jornada nesta terra de códigos e algoritmos.</p>
             <p>Imagine uma caverna repleta de desafios, onde você precisa executar uma série de tarefas repetitivas. Uma função é como um feitiço que você conjura para realizar essas tarefas com um simples comando. Dê um nome à sua função, como "explorar_caverna", e dentro dela, coloque as instruções necessárias para enfrentar os perigos que encontrar.</p>
             <p>Quando estiver diante de uma nova caverna, não precisa mais repetir todas as instruções uma por uma. Basta invocar sua função com um comando mágico, e ela executará tudo para você, como um companheiro confiável que conhece os segredos do caminho.</p>
             <p>Mas cuidado, jovem aventureiro, assim como os feitiços requerem precisão e cuidado, suas funções também devem ser criadas com sabedoria. Escolha seus ingredientes com cautela e organize suas instruções com clareza, e você dominará os mistérios das funções em Python, desbravando novas terras e enfrentando desafios cada vez maiores em sua jornada épica!</p>
-            <h3>Função para saudação</h3>
+            <h3 id='Exemplos'>Função para saudação</h3>
             <pre className={styles.codeblock}>
                 <code className="language-python">
                     {codeExamples[14]}

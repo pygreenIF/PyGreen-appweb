@@ -32,7 +32,7 @@ function About() {
                     <div className={styles.aboutCard}>
                         <img src={fotoPedro} alt="Pedro Pegado" />
                         <h1>PEDRO PEGADO</h1>
-                        <p>Oioi, sou o Pedro e sou estudante de informática do IFRN, campus Ceará-Mirim, sou fã de dublagem e jogos competitivos, e participei do desenvolvimento do site Pygreen.</p>
+                        <p>Oioi, sou o Pedro e sou estudante de informática do IFRN, campus Ceará-Mirim, sou fã de dublagem e jogos competitivos, e sou o principal programador do app web do projeto PyGreen.</p>
                         
                     </div>
                 </div>

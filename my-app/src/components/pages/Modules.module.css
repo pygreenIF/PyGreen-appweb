@@ -17,6 +17,11 @@
     font-family: 'Press Start 2P' !important;
     color: #FFF;
     padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home_container .title_modules h1 span {
+    color: var(--green-primary);
 }
 
 .home_container .title_modules {

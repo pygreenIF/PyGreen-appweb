@@ -35,9 +35,10 @@
 }
 
 .homepage .logo {
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
     z-index: 1;
+    margin-top: 50px;
 }
 
 .homepage .title {
@@ -46,13 +47,13 @@
 }
 
 .homepage .title h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Press Start 2P';
 }
 
 .text {
     margin-top: 10px;
-    max-width: 80%;
+    max-width: 50%;
     z-index: 1;
 }
 
@@ -77,4 +78,19 @@
 .homepage a:hover {
     background-color: var(--green-primary);
     color: var(--white-primary);
+}
+
+@media (max-width: 768px) {
+    .homepage .logo {
+        max-width: 80%;
+        margin-top: 0px;
+    }
+
+    .homepage .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        max-width: 80%;
+    }
 }

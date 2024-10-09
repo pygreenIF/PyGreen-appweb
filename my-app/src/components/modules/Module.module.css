@@ -11,7 +11,7 @@
     border: var(--green-primary) solid 3px;
     border-radius: 20px;
     cursor: pointer;
-    transition: height 0.3s, width 0.3s; 
+    transition: .3s; 
 }
 
 .container.expanded {

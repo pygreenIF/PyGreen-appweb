@@ -28,6 +28,11 @@
 
 .navigation_section {
     border-bottom: 2px solid var(--color-footer);
+    transition: .5s;
+}
+
+.navigation_section:hover {
+    background-color: var(--color-footer);
 }
 
 .navigation_section a {

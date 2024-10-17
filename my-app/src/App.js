@@ -12,6 +12,7 @@ import Footer from './components/layout/Footer'
 import About from './components/modules/About'
 import Home from './components/modules/Home'
 import Game from './components/layout/Game'
+import Auth from './components/modules/Auth'
 
 
 function ContainerLayout({children}) {
@@ -44,6 +45,15 @@ function App() {
           element={
             <ContainerLayout>
               <About />
+            </ContainerLayout>
+          } 
+        />
+        <Route 
+          exact 
+          path="/auth" 
+          element={
+            <ContainerLayout>
+              <Auth />
             </ContainerLayout>
           } 
         />

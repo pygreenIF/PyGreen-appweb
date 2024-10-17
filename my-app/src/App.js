@@ -11,6 +11,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import About from './components/modules/About'
 import Home from './components/modules/Home'
+import Game from './components/layout/Game'
 
 
 function ContainerLayout({children}) {
@@ -27,7 +28,7 @@ function App() {
         <Route exact path="/modulos/modulo-2" element={<Modulo2 />} />
         <Route exact path="/modulos/modulo-3" element={<Modulo3 />} />
         <Route exact path="/modulos/modulo-4" element={<Modulo4 />} />
-
+        <Route exact path="/game" element={<Game />} />
         <Route 
           exact 
           path="/modulos" 

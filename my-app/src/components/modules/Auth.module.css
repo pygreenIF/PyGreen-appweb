@@ -1,11 +1,205 @@
 .container {
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 120px;
+    margin-bottom: 150px;
     width: 100%;
     height: 80%;
     display: flex;
-    border: 2px solid #51BA4F;
+    border: 2px solid var(--green-primary);
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+
+}
+
+.form_login_container, .form_signup_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: var(--white-primary);
+    font-size: .9rem;
+    margin-bottom: 50px;
+}
+
+.form_signup_container .title {
+    margin-left: -15px;
+}
+
+.form_login_container .title {
+    margin-right: -15px;
+}
+
+.form_signup_container .title button{
+    margin-right: -40px;
+}
+
+.form_login_container .title button{
+    margin-left: -40px;
+}
+
+.title span {
+    color: var(--green-primary);
+}
+
+.title button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-primary);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.title button:hover {
+    color: var(--green-primary);
+}
+
+.aside_art {
+    background-color: #51BA4F;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 0.5s ease-in-out;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#signupForm {
+    transform: translateX(100%);
+}
+
+.container.sign-up-mode #signupForm {
+    transform: translateX(0);
+}
+
+.container.sign-up-mode #loginForm {
+    transform: translateX(-100%);
+}
+
+.container.sign-up-mode .aside_art {
+    transform: translateX(-100%);
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.form_login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_login button {
+    margin-top: 20px;
+    color: var(--color-background);
+    background-color: var(--green-primary);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.form_login button:hover {
+    background-color: var(--white-primary);
+    color: var(--green-primary);
+}
+
+.form_login_group {
+    width: 60%;
+}
+
+.form_field {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    border: solid 1px var(--green-primary);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: .1s;
+    color: var(--white-primary);
+    font-size: 1rem;
+}
+
+.form_field:focus {
+    border: solid 3px var(--white-primary);
+    box-shadow: none;
+}
+
+.form_field::placeholder {
+    color: var(--white-primary);
+}
+
+.form_error {
+    color: var(--white-primary);
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.options {
+    margin-top: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options p {
+    color: var(--white-primary);
+    font-weight: 500;
+}
+
+.options button {
+    background-color: var(--white-primary);
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.form_signup {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-rows: repeat(3, auto); 
+}
+
+.form_signup button {
+    grid-column: 1 / span 2; 
+    justify-self: center; 
+
+    color: var(--color-background);
+    background-color: var(--green-primary);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.form_signup button:hover {
+    background-color: var(--white-primary);
+    color: var(--green-primary);
 }

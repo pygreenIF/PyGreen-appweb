@@ -5,6 +5,7 @@ import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
+import Axios from "axios"
 
 function Auth() {
     useEffect(() => {
@@ -39,7 +40,17 @@ function Auth() {
         Senha: yup.string().min(8, 'A senha deve conter 8 caracteres.').required('Este campo é obrigatório'),
     });
 
-    const handleClickRegister = (values) => console.log(values);
+    const handleClickRegister = (values) => {
+        Axios.post("http://localhost:3001/register", {
+            Nome: values.Nome,
+            Sobrenome: values.Sobrenome,
+            Nickname: values.Nickname,
+            Email: values.Email,
+            Senha: values.Senha
+        }).then((response) => {
+            console.log(response);
+        })
+    };
     const validationRegister = yup.object().shape({
         Nome: yup.string().max(255, 'Você ultrapassou o limite de caracteres').required('Este campo é obrigatório'),
         Sobrenome: yup.string().max(255, 'Você ultrapassou o limite de caracteres').required('Este campo é obrigatório'),

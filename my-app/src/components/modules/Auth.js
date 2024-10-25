@@ -34,7 +34,14 @@ function Auth() {
         };
     }, []);
 
-    const handleClickLogin = (values) => console.log(values);
+    const handleClickLogin = (values) => {
+        Axios.post("http://localhost:3001/login", {
+            Nickname: values.Nickname,
+            Senha: values.Senha,
+        }).then((response) => {
+            console.log(response)
+        })
+    };
     const validationLogin = yup.object().shape({
         Nickname: yup.string().required('Este campo é obrigatório'),
         Senha: yup.string().min(8, 'A senha deve conter 8 caracteres.').required('Este campo é obrigatório'),

@@ -2,38 +2,19 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const mysql = require("mysql2");
+const bcrypt = require("bcrypt")
+const saltRounds = 10;
 
 const db = mysql.createPool({
     host: "localhost",
     user: "root",
-    password: "labinfo",
+    password: "Pedro0107",
     database: "PyGreenDB",
 });
 
-// app.get("/", (req, res) => {
-//     const progressoID = 1; 
-//     const imageID = 1;
-
-//     const sqlInsertUsuario = `
-//         INSERT INTO Usuario (Nome, Sobrenome, Nickname, Email, Senha, ProgressoID, ImageID)
-//         VALUES ('Pedro', 'Pegado', 'DRAzIL', 'pedro@gmail.com', '12345678', ?, ?)
-//     `;
-
-//     db.query(sqlInsertUsuario, [progressoID, imageID], (err, usuarioResult) => {
-//         if (err) {
-//             console.error("Erro ao inserir usuário:", err.sqlMessage);
-//             return res.status(500).send("Erro ao inserir usuário.");
-//         }
-    
-//         console.log("Usuário inserido com sucesso!");
-//         res.send("Usuário inserido com sucesso!");
-//     });
-    
-// });
-
 app.use(express.json())
 app.use(cors({
-    origin: 'http://localhost:3000', // Permita apenas a origem do seu frontend
+    origin: 'http://localhost:3000',
     credentials: true
 }));
 
@@ -43,25 +24,53 @@ app.post("/register", (req, res) => {
     const Nickname = req.body.Nickname;
     const Email = req.body.Email;
     const Senha = req.body.Senha;
+    const progressoID = 1; 
+    const imageID = 1;
 
+    const sqlInsertUsuario = `
+    INSERT INTO usuario (Nome, Sobrenome, Nickname, Email, Senha, ProgressoID, ImageID) VALUES (?, ?, ?, ?, ?, ?, ?)
+    `;
 
-    db.query("SELECT * FROM usuario WHERE Email = ?", [Email], (err, result) => {
-        if(err) {
-            res.send(err);
+    db.query("SELECT * FROM usuario WHERE Email = ?", [Email], (err, response) => {
+        if (err) {
+            return res.send(err);
         }
-        if(result.lenght == 0) {
-            db.query("INSERT INTO usuario (Nome, Sobrenome, Nickname, Email, Senha) VALUES (?, ?, ?, ?, ?, 1, 1)", [Nome, Sobrenome, Nickname, Email, Senha], (err, result) => {
-                if(err){
-                    res.send(err)
-                }
-                res.send({msg: "Cadastrado com sucesso"})
+        
+        if (result.length === 0) {
+            bcrypt.hash(Senha, saltRounds, (err, hash) => {
+                db.query(sqlInsertUsuario, [Nome, Sobrenome, Nickname, Email, hash, progressoID, imageID], (err, response) => {
+                    if (err) {
+                        return res.send(err); 
+                    }
+                    return res.send({ msg: "Cadastrado com sucesso" }); 
+                });
             })
-        } else{
-            res.send({msg: "Usuário já cadastrado"})
+            
+        } else {
+            return res.send({ msg: "Usuário já cadastrado" }); 
         }
-        res.send(result)
+    });
+});
+
+app.post("/login", (req, res) => {
+    const Nickname = req.body.Nickname;
+    const Senha = req.body.Senha;
+    const SenhaHashed = bcrypt.hash(Senha, saltRounds)
+    
+    const sqlInsertUsuario = `
+    SELECT * FROM usuario WHERE Nickname = ? AND Senha = ?`;
+    db.query(sqlInsertUsuario, [Nickname, SenhaHashed], (err, result) => {
+        if(err){
+            req.send(err)
+        }
+        if(result.length > 0){
+            res.send({ msg: "Usuário Logado" })
+        }else{
+            res.send({ msg: "Conta não encontrada" })
+        }
     })
 })
+
 
 app.listen(3001, () => {
     console.log("Rodando na porta 3001");

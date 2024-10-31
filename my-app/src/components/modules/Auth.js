@@ -92,7 +92,7 @@ function Auth() {
                                 <ErrorMessage component='span' name='Nickname' className={styles.form_error} />
                             </div>
                             <div className={styles.form_login_group}>
-                                <Field name='Senha' className={styles.form_field} placeholder="Senha" />
+                                <Field type='password' name='Senha' className={styles.form_field} placeholder="Senha" />
                                 <ErrorMessage component='span' name='Senha' className={styles.form_error} />
                             </div>
                             <button type='submit'>ENTRAR</button>
@@ -128,11 +128,11 @@ function Auth() {
                                 <ErrorMessage component='span' name='Email' className={styles.form_error} />
                             </div>
                             <div className={styles.form_signup_group}>
-                                <Field name='Senha' className={styles.form_field} placeholder="Senha" />
+                                <Field type='password' name='Senha' className={styles.form_field} placeholder="Senha" />
                                 <ErrorMessage component='span' name='Senha' className={styles.form_error} />
                             </div>
                             <div className={styles.form_signup_group}>
-                                <Field name='ConfirmarSenha' className={styles.form_field} placeholder="Confirme sua senha" />
+                                <Field type='password' name='ConfirmarSenha' className={styles.form_field} placeholder="Confirme sua senha" />
                                 <ErrorMessage component='span' name='ConfirmarSenha' className={styles.form_error} />
                             </div>
                             <button type='submit'>CADASTRAR</button>

@@ -77,6 +77,41 @@ app.post("/login", (req, res) => {
     });
 });
 
+app.get("/user/:nickname", (req, res) => {
+    const nickname = req.params.nickname;
+
+    const sql = `
+        SELECT 
+            u.UserID,
+            u.Nome,
+            u.Sobrenome,
+            u.Nickname,
+            u.Email,
+            i.Caminho AS ImageCaminho,
+            p.Porcentagem
+        FROM Usuario u
+        LEFT JOIN ImagemPerfil i ON u.ImageID = i.ImageID
+        LEFT JOIN Progresso p ON u.ProgressoID = p.ProgressoID
+        WHERE u.Nickname = ?
+    `;
+
+    db.query(sql, [nickname], (err, result) => {
+        if (err) {
+            console.error(err); // Adicione este console.log
+            return res.status(500).send(err);
+        }
+        
+        console.log(result); // Adicione este console.log
+        if (result.length > 0) {
+            res.json(result[0]); // Retorna os dados do usuário
+        } else {
+            res.status(404).json({ msg: "Usuário não encontrado" });
+        }
+    });
+});
+
+
+
 app.listen(3001, () => {
     console.log("Rodando na porta 3001");
 });

@@ -62,6 +62,39 @@
     color: var(--green-primary) !important;
 }
 
+.authButton a {
+    font-family: 'Open Sans' !important;
+    padding: 0.5em 1em;
+    background-color: var(--green-primary);
+    border-radius: 5px;
+    color: var(--white-primary) !important;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+.authButton a:hover {
+    background-color: var(--white-primary);
+    color: var(--green-primary) !important;
+}
+
+.logoutButton {
+    font-family: 'Open Sans' !important;
+    padding: 0.5em 1em;
+    background-color: var(--red-primary);
+    border-radius: 5px;
+    color: var(--white-primary) !important;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.logoutButton:hover {
+    background-color: var(--white-primary);
+    color: var(--red-primary) !important;
+}
+
+
 @media (max-width: 820px) {
     .menuIcon {
         display: block !important;

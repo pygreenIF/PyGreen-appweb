@@ -4,6 +4,8 @@ const app = express();
 const mysql = require("mysql2");
 const bcrypt = require("bcrypt")
 const saltRounds = 10;
+const jwt = require("jsonwebtoken");
+const secret = "seuSegredoSecreto";
 
 const db = mysql.createPool({
     host: "localhost",
@@ -31,20 +33,20 @@ app.post("/register", (req, res) => {
     INSERT INTO usuario (Nome, Sobrenome, Nickname, Email, Senha, ProgressoID, ImageID) VALUES (?, ?, ?, ?, ?, ?, ?)
     `;
 
-    db.query("SELECT * FROM usuario WHERE Email = ?", [Email], (err, response) => {
+    db.query("SELECT * FROM usuario WHERE Email = ?", [Email], (err, result) => {
         if (err) {
             return res.send(err);
         }
         
         if (result.length === 0) {
             bcrypt.hash(Senha, saltRounds, (err, hash) => {
-                db.query(sqlInsertUsuario, [Nome, Sobrenome, Nickname, Email, hash, progressoID, imageID], (err, response) => {
-                    if (err) {
-                        return res.send(err); 
-                    }
+                if (err) return res.send(err);
+                
+                db.query(sqlInsertUsuario, [Nome, Sobrenome, Nickname, Email, hash, progressoID, imageID], (err, result) => {
+                    if (err) return res.send(err); 
                     return res.send({ msg: "Cadastrado com sucesso" }); 
                 });
-            })
+            });
             
         } else {
             return res.send({ msg: "Usuário já cadastrado" }); 
@@ -53,24 +55,27 @@ app.post("/register", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-    const Nickname = req.body.Nickname;
-    const Senha = req.body.Senha;
-    const SenhaHashed = bcrypt.hash(Senha, saltRounds)
+    const { Nickname, Senha } = req.body;
     
-    const sqlInsertUsuario = `
-    SELECT * FROM usuario WHERE Nickname = ? AND Senha = ?`;
-    db.query(sqlInsertUsuario, [Nickname, SenhaHashed], (err, result) => {
-        if(err){
-            req.send(err)
+    db.query("SELECT * FROM usuario WHERE Nickname = ?", [Nickname], (err, result) => {
+        if (err) return res.status(500).send(err);
+        
+        if (result.length > 0) {
+            bcrypt.compare(Senha, result[0].Senha, (err, match) => {
+                if (err) return res.status(500).send(err);
+                
+                if (match) {
+                    const token = jwt.sign({ id: result[0].UserID }, secret, { expiresIn: '1h' });
+                    return res.json({ msg: "Usuário Logado", token });
+                } else {
+                    return res.status(401).json({ msg: "Senha incorreta" });
+                }
+            });
+        } else {
+            return res.status(404).json({ msg: "Conta não encontrada" });
         }
-        if(result.length > 0){
-            res.send({ msg: "Usuário Logado" })
-        }else{
-            res.send({ msg: "Conta não encontrada" })
-        }
-    })
-})
-
+    });
+});
 
 app.listen(3001, () => {
     console.log("Rodando na porta 3001");

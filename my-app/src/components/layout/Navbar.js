@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Container from './Container';
@@ -7,9 +7,22 @@ import logo from '../../img/LogoPygreen.png';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        setIsLoggedIn(!!token);
+    }, []);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        setIsLoggedIn(false);
+        alert("Você foi desconectado");
+        window.location.href = "/auth";
     };
 
     return (
@@ -34,6 +47,15 @@ function Navbar() {
                     </li>
                     <li className={styles.item}>
                         <NavLink onClick={toggleMenu} to='/sobre' style={({ isActive }) => ({ color: isActive ? '#51BA4F' : '#FFF' })}>Sobre</NavLink>
+                    </li>
+                    <li className={`${styles.item} ${styles.authButton}`}>
+                        {isLoggedIn ? (
+                            <button onClick={handleLogout} className={styles.logoutButton}>Deslogar</button>
+                        ) : (
+                            <NavLink onClick={toggleMenu} to='/auth' style={({ isActive }) => ({ color: isActive ? '#FFF' : '#51BA4F' })}>
+                                Entrar/Cadastrar
+                            </NavLink>
+                        )}
                     </li>
                 </ul>
             </Container>

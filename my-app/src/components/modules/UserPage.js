@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Container from '../layout/Container';
 import styles from './UserPage.module.css';
 import Axios from "axios";
-import profileImage from '../../img/user-images/fotoperfil1.png'
+import profileImage from '../../img/user-images/pygreen-person.png'
 
 function UserPage() {
     const { nickname } = useParams();

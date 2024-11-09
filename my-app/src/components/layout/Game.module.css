@@ -14,3 +14,8 @@
     background-color: var(--color-background);
 }
 
+@media (max-width: 920px) {
+    .game_container {
+        display: none;
+    }
+}

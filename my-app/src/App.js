@@ -15,6 +15,7 @@ import Game from './components/layout/Game'
 import Auth from './components/modules/Auth'
 import Modulo0 from './components/pages/modules-pages/Modulo0'
 import UserPage from './components/modules/UserPage'
+import Profile from './components/modules/Profile'
 
 
 function ContainerLayout({children}) {
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/modulos/modulo-3" element={<Modulo3 />} />
         <Route exact path="/modulos/modulo-4" element={<Modulo4 />} />
         <Route path="/user/:nickname" element={<UserPage />}/>
+        <Route path="/profile" element={<Profile />}/>
         <Route exact path="/game" element={<Game />} />
         <Route 
           exact 

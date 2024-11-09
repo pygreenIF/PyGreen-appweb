@@ -202,3 +202,55 @@
     background-color: var(--white-primary);
     color: var(--green-primary);
 }
+
+.link_to_signup {
+    display: none;
+}
+
+@media (max-width: 920px) {
+    .container {
+        border: none;
+        flex-direction: column;
+    }
+
+    .aside_art {
+        display: none;
+    }
+
+    .form_login_container, .form_signup_container {
+        width: 100%;
+    }
+
+    .form_login_container .title {
+        text-align: center;
+    }
+
+    .form_signup_container .title button{
+        display: none;
+    }
+    
+    .form_login_container .title button{
+        display: none;
+    }
+
+    .form_signup_container {
+        margin-top: 100px !important;
+    }
+
+    .options button {
+        display: none;
+    }
+
+    .link_to_signup, .link_to_login  {
+        display: flex;
+        background-color: var(--white-primary);
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: .8rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--black-primary);
+    }
+}

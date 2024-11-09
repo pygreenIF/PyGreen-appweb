@@ -110,6 +110,46 @@ app.get("/user/:nickname", (req, res) => {
     });
 });
 
+const authenticateToken = (req, res, next) => {
+    const token = req.headers['authorization'];
+    if (!token) return res.status(401).json({ msg: "Acesso negado!" });
+
+    jwt.verify(token.split(' ')[1], secret, (err, user) => {
+        if (err) return res.status(403).json({ msg: "Token inválido!" });
+        req.userId = user.id;
+        next();
+    });
+};
+
+app.get("/profile", authenticateToken, (req, res) => {
+    const userId = req.userId;
+
+    const sql = `
+        SELECT 
+            u.UserID,
+            u.Nome,
+            u.Sobrenome,
+            u.Nickname,
+            u.Email,
+            i.Caminho AS ImageCaminho,
+            p.Porcentagem
+        FROM Usuario u
+        LEFT JOIN ImagemPerfil i ON u.ImageID = i.ImageID
+        LEFT JOIN Progresso p ON u.ProgressoID = p.ProgressoID
+        WHERE u.UserID = ?
+    `;
+
+    db.query(sql, [userId], (err, result) => {
+        if (err) return res.status(500).send(err);
+
+        if (result.length > 0) {
+            res.json(result[0]);
+        } else {
+            res.status(404).json({ msg: "Usuário não encontrado" });
+        }
+    });
+});
+
 
 
 app.listen(3001, () => {

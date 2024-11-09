@@ -101,6 +101,7 @@ function Auth() {
                     <div className={styles.options}>
                         <p>Não tem uma conta?</p>
                         <button id="signUpBtn">Inscreva-se</button>
+                        <a href='#signupForm' className={styles.link_to_signup}>Inscreva-se</a>
                     </div>
                 </div>
 
@@ -141,6 +142,7 @@ function Auth() {
                     <div className={styles.options}>
                         <p>Já tem uma conta?</p>
                         <button id="signInBtn">Entre</button>
+                        <a href='#loginForm' className={styles.link_to_login}>Entre</a>
                     </div>
                 </div>
                 <div className={styles.aside_art} id="asideArt"></div>

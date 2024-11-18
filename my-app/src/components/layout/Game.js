@@ -2,10 +2,10 @@ import Unity, { UnityContext } from "react-unity-webgl";
 import styles from './Game.module.css'
 
 const unityContext = new UnityContext({
-  loaderUrl: "/assets/JogoPygreenWebGL.loader.js",
-  dataUrl: "/assets/JogoPygreenWebGL.data",
-  frameworkUrl: "/assets/JogoPygreenWebGL.framework.js",
-  codeUrl: "/assets/JogoPygreenWebGL.wasm",
+  loaderUrl: "/assets/JogoModulo1/JogoWebGLModulo1.loader.js",
+  dataUrl: "/assets/JogoModulo1/JogoWebGLModulo1.data",
+  frameworkUrl: "/assets/JogoModulo1/JogoWebGLModulo1.framework.js",
+  codeUrl: "/assets/JogoModulo1/JogoWebGLModulo1.wasm",
 });
 
 function Game() {

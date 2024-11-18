@@ -20,10 +20,10 @@ function Modules() {
             <div className={styles.title_modules}>
                 <h1>Módulos <span>.</span></h1>
             </div>
-            <Module 
+            {/* <Module 
             contents={['Como utilizar o Drive', 'Como utilizar o Email', 'O que é programação?', 'Linguagem de programação Python', 'Iniciação']}
             num_module='0' 
-            link='modulo-0'/>
+            link='modulo-0'/> */}
 
             <Module 
             contents={['Métodos de entrada e saída', 'Operadores de atribuição, variáveis e constantes', 'Tipos de dados (Int, bool, float, str)', 'Operadores aritméticos']} 

@@ -13,7 +13,7 @@ import About from './components/modules/About'
 import Home from './components/modules/Home'
 import Game from './components/layout/Game'
 import Auth from './components/modules/Auth'
-import Modulo0 from './components/pages/modules-pages/Modulo0'
+// import Modulo0 from './components/pages/modules-pages/Modulo0'
 import UserPage from './components/modules/UserPage'
 import Profile from './components/modules/Profile'
 
@@ -28,7 +28,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/modulos/modulo-0" element={<Modulo0 />} />
+        {/* <Route exact path="/modulos/modulo-0" element={<Modulo0 />} /> */}
         <Route exact path="/modulos/modulo-1" element={<Modulo1 />} />
         <Route exact path="/modulos/modulo-2" element={<Modulo2 />} />
         <Route exact path="/modulos/modulo-3" element={<Modulo3 />} />

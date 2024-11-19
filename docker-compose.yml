@@ -1,0 +1,12 @@
+services:
+  app:
+    build: ./app
+    container_name: nodejs_container_todo_front
+    ports:
+      - "3030:3000"
+    volumes:
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules
+networks:
+  backend_network:
+    driver: bridge

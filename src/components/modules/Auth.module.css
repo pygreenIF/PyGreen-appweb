@@ -207,6 +207,10 @@
     display: none;
 }
 
+.link_to_login {
+    display: none;
+}
+
 @media (max-width: 920px) {
     .container {
         border: none;

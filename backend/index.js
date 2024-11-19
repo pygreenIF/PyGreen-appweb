@@ -97,13 +97,13 @@ app.get("/user/:nickname", (req, res) => {
 
     db.query(sql, [nickname], (err, result) => {
         if (err) {
-            console.error(err); // Adicione este console.log
+            console.error(err); 
             return res.status(500).send(err);
         }
         
-        console.log(result); // Adicione este console.log
+        console.log(result);
         if (result.length > 0) {
-            res.json(result[0]); // Retorna os dados do usuário
+            res.json(result[0]); 
         } else {
             res.status(404).json({ msg: "Usuário não encontrado" });
         }

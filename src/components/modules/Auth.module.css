@@ -74,7 +74,28 @@
     transition: transform 0.5s ease-in-out;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.aside_art img {
+    width: 80%;
+    animation: upDown 2s ease-in-out infinite;
+}
+
+@keyframes upDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
 
 #signupForm {
     transform: translateX(100%);
@@ -93,6 +114,7 @@
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
 }
+
 
 .form_login {
     width: 100%;

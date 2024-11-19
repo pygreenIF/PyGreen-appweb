@@ -39,9 +39,9 @@ function Navbar() {
                     <li className={styles.item}>
                         <NavLink onClick={toggleMenu} to='/' style={({ isActive }) => ({ color: isActive ? '#51BA4F' : '#FFF' })}>Home</NavLink>
                     </li>
-                    <li className={styles.item}>
+                    {/* <li className={styles.item}>
                         <NavLink onClick={toggleMenu} to='/trailer' style={({ isActive }) => ({ color: isActive ? '#51BA4F' : '#FFF' })}>Trailer</NavLink>
-                    </li>
+                    </li> */}
                     <li className={styles.item}>
                         <NavLink onClick={toggleMenu} to='/modulos' style={({ isActive }) => ({ color: isActive ? '#51BA4F' : '#FFF' })}>Módulos</NavLink>
                     </li>

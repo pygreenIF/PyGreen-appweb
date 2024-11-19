@@ -7,6 +7,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import Axios from "axios";
 
+import imageAside from '../../img/personagem-tela-auth.png';
+
 function Auth() {
     useEffect(() => {
         const signUpBtn = document.getElementById('signUpBtn');
@@ -145,7 +147,7 @@ function Auth() {
                         <a href='#loginForm' className={styles.link_to_login}>Entre</a>
                     </div>
                 </div>
-                <div className={styles.aside_art} id="asideArt"></div>
+                <div className={styles.aside_art} id="asideArt"><img className={styles.imageAside} src={imageAside} alt='Menino flutuando'/></div>
             </div>
         </Container>
     );

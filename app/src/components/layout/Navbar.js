@@ -48,7 +48,7 @@ function Navbar() {
                     <li className={styles.item}>
                         <NavLink onClick={toggleMenu} to='/sobre' style={({ isActive }) => ({ color: isActive ? '#51BA4F' : '#FFF' })}>Sobre</NavLink>
                     </li>
-                    <li className={`${styles.item} ${styles.authButton}`}>
+                    {/* <li className={`${styles.item} ${styles.authButton}`}>
                         {isLoggedIn ? (
                             <button onClick={handleLogout} className={styles.logoutButton}>Deslogar</button>
                         ) : (
@@ -56,7 +56,7 @@ function Navbar() {
                                 Entrar/Cadastrar
                             </NavLink>
                         )}
-                    </li>
+                    </li> */}
                 </ul>
             </Container>
         </nav>

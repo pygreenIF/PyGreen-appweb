@@ -2,18 +2,18 @@ import styles from './Modules.module.css'
 
 import Module from '../modules/Module'
 
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import React, { useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
 
 function Modules() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    useEffect(() => {
-        const token = localStorage.getItem("token");
-        if (!token) {
-            navigate("/auth");
-        }
-    }, [navigate]);
+    // useEffect(() => {
+    //     const token = localStorage.getItem("token");
+    //     if (!token) {
+    //         navigate("/auth");
+    //     }
+    // }, [navigate]);
     
     return(
         <section className={styles.home_container}>

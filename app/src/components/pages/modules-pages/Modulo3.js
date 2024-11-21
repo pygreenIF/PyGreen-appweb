@@ -6,6 +6,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-python';
 
 import ContentPage from '../../layout/ContentPage';
+import GameModulo3 from '../../layout/GameModulo3';
 
 function Modulo3() {
     useEffect(() => {
@@ -317,7 +318,8 @@ print("A área do quadrado é:", area_quadrado) # Retorna > A área do quadrado 
                     {codeExamples[15]}
                 </code>
             </pre>
-        </div>
+            <GameModulo3/>
+        </div>     
         <div className={styles.buttonContainer}>
             <a href='modulo-2 '>Módulo Anterior</a>
             <a href='modulo-4'>Próximo Módulo</a>

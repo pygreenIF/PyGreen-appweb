@@ -11,7 +11,6 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import About from './components/modules/About'
 import Home from './components/modules/Home'
-import Game from './components/layout/Game'
 import Auth from './components/modules/Auth'
 // import Modulo0 from './components/pages/modules-pages/Modulo0'
 import UserPage from './components/modules/UserPage'
@@ -35,7 +34,6 @@ function App() {
         <Route exact path="/modulos/modulo-4" element={<Modulo4 />} />
         <Route path="/user/:nickname" element={<UserPage />}/>
         <Route path="/profile" element={<Profile />}/>
-        <Route exact path="/game" element={<Game />} />
         <Route 
           exact 
           path="/modulos" 

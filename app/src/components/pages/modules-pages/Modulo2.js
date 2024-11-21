@@ -6,6 +6,8 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-python';
 
 import ContentPage from '../../layout/ContentPage';
+import GameModulo2 from '../../layout/GameModulo2';
+import GameModulo1 from '../../layout/GameModulo1';
 
 function Modulo2() {
     useEffect(() => {
@@ -383,6 +385,7 @@ print("Exausto! Você fez", flexoes, "flexões e coletou um total de", moedas, "
                     <li><span>break</span>: Sai do laço imediatamente, como um herói saindo do calabouço assim que encontra o tesouro.</li>
                     <li><span>continue</span>: Pula a iteração atual e passa para a próxima, como um herói evitando áreas perigosas na floresta enquanto coleta ervas.</li>
                 </ul>
+                <GameModulo2/>
             </div>
             <div className={styles.buttonContainer}>
                 <a href='modulo-1'>Módulo Anterior</a>

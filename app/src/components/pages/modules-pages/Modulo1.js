@@ -6,7 +6,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-python';
 
 import ContentPage from '../../layout/ContentPage';
-import Game from '../../layout/Game'
+import GameModulo1 from '../../layout/GameModulo1';
 
 function Modulo1() {
     useEffect(() => {
@@ -404,7 +404,7 @@ print("O poder total do feitiço é:", poder_total)`,
                     </pre>
                     <p>Com esses operadores aritméticos, você poderá calcular e manipular números com maestria, tornando-se um mago ainda mais poderoso em suas aventuras pelo mundo da programação. Boa sorte, herói, e que suas habilidades matemáticas sempre o guiem ao sucesso!</p>
                 </div>
-                <Game />
+                <GameModulo1/>
                 <div className={styles.buttonContainerRight}>
                     <a href='modulo-2'>Próximo Módulo</a>
                 </div>

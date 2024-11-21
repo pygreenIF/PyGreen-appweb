@@ -6,6 +6,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-python';
 
 import ContentPage from '../../layout/ContentPage';
+import GameModulo4 from '../../layout/GameModulo4';
 
 function Modulo4() {
     useEffect(() => {
@@ -109,7 +110,9 @@ return (
                 </code>
             </pre>
             <p>Parabéns, valentes aventureiros! Vocês agora dominam a arte de criar, ler, editar e deletar arquivos em Python. Com essas habilidades, estão prontos para enfrentar qualquer desafio no mundo digital. Continuem explorando e descobrindo, pois o universo da programação está cheio de segredos e maravilhas esperando por vocês.<br /><br />A aventura continua!</p>
+            <GameModulo4/>
         </div>
+
         <div className={styles.buttonContainerLeft}>
             <a href='modulo-3'>Módulo Anterior</a>
         </div>
